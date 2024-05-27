@@ -1,5 +1,5 @@
 // Exercise #4
-let getJohnProfile = () => {
+let getJohnProfile = async () => {
   return new Promise(function (resolve) {
     setTimeout(
       () =>
@@ -13,3 +13,9 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+const getDataFunc = async () => {
+  const getData = await getJohnProfile();
+  console.log(getData);
+};
+
+getDataFunc();
